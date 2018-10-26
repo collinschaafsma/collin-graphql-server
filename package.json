@@ -1,0 +1,33 @@
+{
+  "name": "collin-grapql-server",
+  "version": "0.0.1",
+  "description": "GraphQL Server for data.collin.io",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -r esm server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collinschaafsma/collin-graphql-server.git"
+  },
+  "author": "Collin Schaafsma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/collinschaafsma/collin-graphql-server/issues"
+  },
+  "homepage": "https://github.com/collinschaafsma/collin-graphql-server#readme",
+  "devDependencies": {
+    "esm": "^3.0.84",
+    "nodemon": "^1.18.4"
+  },
+  "dependencies": {
+    "apollo-datasource-rest": "^0.1.5",
+    "apollo-server": "^2.1.0",
+    "dotenv": "^6.1.0",
+    "graphql": "^14.0.2"
+  }
+}
