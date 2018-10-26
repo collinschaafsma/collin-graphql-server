@@ -10,6 +10,7 @@ const typeDefs = gql`
     type: String!
     moving_time: String!
     start_date: String!
+    gear_id: String!
   }
 
   type Query {
@@ -20,13 +21,11 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    activity: (root, { id }, { dataSources }) =>
-      dataSources.stravaAPI.getActivity(id),
+    activity: (root, { id }, { dataSources }) => dataSources.stravaAPI.getActivity(id),
     activities: (root, args, { dataSources }) => dataSources.stravaAPI.getActivities(),
   },
   Activity: {
-    name: ({ name }) => name,
-    type: ({ type }) => type,
+    id: ({ id }) => id
   },
 };
 

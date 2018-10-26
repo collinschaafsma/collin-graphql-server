@@ -3,7 +3,7 @@ import { RESTDataSource } from 'apollo-datasource-rest';
 export class StravaAPI extends RESTDataSource {
   constructor() {
     super();
-    this.baseURL = 'https://www.strava.com/api/v3/';
+    this.baseURL = process.env.STRAVA_URL;
   }
 
   willSendRequest(request) {
